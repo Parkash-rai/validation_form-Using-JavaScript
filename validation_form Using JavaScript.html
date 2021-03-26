@@ -1,0 +1,87 @@
+<html>
+<head>
+<title> Validation Form</title>
+<style>
+#main{
+	background-color: blue;
+    margin:auto;
+	margin-top:20px;
+    margin-left:9%;	
+	border-radius: 5px;
+	padding: 20px;
+	width: 350px;
+	height:620px;
+	box-sizing:border-box;
+}
+#main input{	
+	border-radius: 10px;
+	padding: 10px;
+	width: 90%;
+    font-size:17px;
+	border:none;
+	outline:none;
+	margin:12px;
+	height:40px;
+	margin-left:20px;}
+input[type=submit]{
+background:red;
+color:#fff;
+font-weight:bold;
+}
+</style>></head>
+<body>
+<script type="text/javascript">
+function validate(){
+var key0=document.forms["register"]["uname"].value;
+var key1=document.forms["register"]["fname"].value;
+var key2=document.forms["register"]["rno"].value;
+var key3=document.forms["register"]["sec"].value;
+var key4=document.forms["register"]["dept"].value;
+if(key0=="" || key0.length>15){
+alert("UserName must have fill it & must have  less than 15 characters!");
+return false;
+}
+if(key1=="" || key1.length>15){
+alert("Father's Name  must have fill it & length will be less  than 15 characters!");
+return false;
+}
+if(key2=="" || key2.length>8){
+alert(" Roll No must have fill it & length will be less  than 8 characters!");
+return false;
+}
+if(key3=="" || key3.length>5){
+alert("  Section  must have fill it & length will be less  than 5 characters!");
+return false;
+}
+if(key4=="" || key5.length>15){
+alert(" Departmant must have fill it & length will be less  than 15 characters!");
+return false;
+}
+}
+</script>
+<form name="register" onsubmit="return validate()">
+<div id="main">
+<h1 Style=" margin-left:40px; text-decoration:underline;">Validation Form</h1>
+<label Style="font-weight:bold; margin-left:100px; font-size:22px; color:White;"> UserName</label>
+<input type="text" name="uname" placeholder=" Enter User Name " size="20"/>
+<br>
+<label Style="font-weight:bold; margin-left:78px;font-size:22px;color:White;"> Father's Name</label>
+<input type="text" name="fname" placeholder=" Enter Father's Name "  size="20"/>
+<br>
+
+<label Style="font-weight:bold; margin-left:110px; font-size:22px;color:White;">Roll No </label>
+<input type="text" name="rno"  placeholder=" Enter Your Roll N0 "  size="20"/>
+
+<br>
+
+<label Style="font-weight:bold; margin-left:110px;font-size:22px;color:White;"> Section</label>
+<input type="text" name="sec" placeholder=" Enter Your Section "  size="20"/>
+<br>
+<label Style="font-weight:bold; margin-left:90px;font-size:22px;color:White;"> Departmant</label>
+<input type="text" name="dept" placeholder=" Enter your Departmant "  size="20"/>
+<br>
+ <input type="submit" value="Submit" />
+</div></form>
+</body>
+</html>
+
